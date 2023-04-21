@@ -7,6 +7,7 @@ export default {
 			title: 'Name',
 			name: 'name',
 			type: 'string',
+			validation: (Rule) => Rule.required(),
 		},
 		{
 			title: 'Image',
@@ -28,12 +29,19 @@ export default {
 			title: 'Category',
 			name: 'category',
 			type: 'reference',
-			to: {type: 'category'}
+			to: {type: 'category'},
 		},
 		{
 			title: 'Price',
 			name: 'price',
 			type: 'number',
+			validation: (Rule) => Rule.required(),
+		},
+		{
+			title: 'Size',
+			name: 'size',
+			type: 'reference',
+			to: {type: 'size'},
 		}
 	]
 }
