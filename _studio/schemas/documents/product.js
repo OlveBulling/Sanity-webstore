@@ -44,9 +44,11 @@ export default {
 		{
 			title: 'Size',
 			name: 'size',
-			type: 'reference',
-			to: {type: 'size'},
+			type: 'array',
+			of: [{type: 'reference', to: {type: 'size'}}],
 			validation: (Rule) => Rule.required(),
+			options: { multiple: true, },
+			description: 'Please add all the sizes in which the product is available',
 		}
 	]
 }
