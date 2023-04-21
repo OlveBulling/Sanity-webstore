@@ -10,6 +10,7 @@ export default {
 			validation: (Rule) => Rule.required(),
 		},
 		{
+			// images taken from Zalando.com
 			title: 'Image',
 			name: 'image',
 			type: 'array',
