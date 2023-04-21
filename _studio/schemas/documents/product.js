@@ -13,23 +13,27 @@ export default {
 			title: 'Image',
 			name: 'image',
 			type: 'image',
+			validation: (Rule) => Rule.required(),
 		},
 		{
 			title: 'Describtion',
 			name: 'describtion',
 			type: 'text',
+			validation: (Rule) => Rule.required(),
 		},
 		{
 			title: 'Brand',
 			name: 'brand',
 			type: 'reference',
 			to: {type: 'brand'},
+			validation: (Rule) => Rule.required(),
 		},
 		{
 			title: 'Category',
 			name: 'category',
 			type: 'reference',
 			to: {type: 'category'},
+			validation: (Rule) => Rule.required(),
 		},
 		{
 			title: 'Price',
@@ -42,6 +46,7 @@ export default {
 			name: 'size',
 			type: 'reference',
 			to: {type: 'size'},
+			validation: (Rule) => Rule.required(),
 		}
 	]
 }
