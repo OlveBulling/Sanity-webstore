@@ -12,7 +12,8 @@ export default {
 		{
 			title: 'Image',
 			name: 'image',
-			type: 'image',
+			type: 'array',
+			of: [{ type: 'image' }],
 			validation: (Rule) => Rule.required(),
 		},
 		{
@@ -25,14 +26,14 @@ export default {
 			title: 'Brand',
 			name: 'brand',
 			type: 'reference',
-			to: {type: 'brand'},
+			to: { type: 'brand' },
 			validation: (Rule) => Rule.required(),
 		},
 		{
 			title: 'Category',
 			name: 'category',
 			type: 'reference',
-			to: {type: 'category'},
+			to: { type: 'category' },
 			validation: (Rule) => Rule.required(),
 		},
 		{
@@ -45,7 +46,7 @@ export default {
 			title: 'Size',
 			name: 'size',
 			type: 'array',
-			of: [{type: 'reference', to: {type: 'size'}}],
+			of: [{ type: 'reference', to: { type: 'size' } }],
 			validation: (Rule) => Rule.required(),
 			options: { multiple: true, },
 			description: 'Please add all the sizes in which the product is available',
