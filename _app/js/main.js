@@ -1,3 +1,7 @@
-import Test from './modules/test.js';
+// import Test from './modules/test.js';
 
-Test();
+// Test();
+
+import Products from './modules/products.js';
+
+Products();
