@@ -38,11 +38,6 @@ export default async function Products() {
 			productPrice.textContent = (products[index].price) + 'kr';
 			productCard.appendChild(productPrice);
 
-			// creating product describtion
-			const productDescribtion = document.createElement('p');
-			productDescribtion.className = 'product_describtion';
-			productDescribtion.textContent = products[index].describtion;
-			productCard.appendChild(productDescribtion);
 
 			// creating product images
 			product.images.forEach((imageUrl) => {
@@ -51,6 +46,12 @@ export default async function Products() {
 				productImage.src = imageUrl;
 				productCard.appendChild(productImage);
 			})
+			// creating product describtion
+			const productDescribtion = document.createElement('p');
+			productDescribtion.className = 'product_describtion';
+			productDescribtion.textContent = products[index].describtion;
+			productCard.appendChild(productDescribtion);
+			
 			
 			const productList = document.getElementById('product_container');
 			productList.appendChild(productCard);

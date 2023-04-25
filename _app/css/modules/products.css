@@ -12,7 +12,7 @@
 }
 
 .product_describtion {
-	
+	padding: 1rem;
 }
 
 .product_price {
@@ -20,5 +20,8 @@
 }
 
 .product_card {
+	padding-top: 1rem;
 	margin-bottom: 5rem;
+	border: 0.2rem solid black;
+	max-width: 60rem;
 }
