@@ -15,26 +15,36 @@ export default async function Products() {
 	const products = await sanity.fetch(query);
 
 	function createProductCards() {
+		// creating product card
 		products.forEach((product, index) => {
 			const productCard = document.createElement('div');
 			productCard.className = 'product_card';
 
+			// creating product title
 			const productTitle = document.createElement('h2');
 			productTitle.className = 'product_title'
 			productTitle.textContent = products[index].name;
 			productCard.appendChild(productTitle);
 
+			// creating product category
 			const productCategory = document.createElement('p');
 			productCategory.className = 'product_category';
 			productCategory.textContent = products[index].category;
 			productCard.appendChild(productCategory);
 
+			// creating product price
 			const productPrice = document.createElement('p');
 			productPrice.classnName = 'product_price';
 			productPrice.textContent = (products[index].price) + 'kr';
 			productCard.appendChild(productPrice);
 
+			// creating product describtion
+			const productDescribtion = document.createElement('p');
+			productDescribtion.className = 'product_describtion';
+			productDescribtion.textContent = products[index].describtion;
+			productCard.appendChild(productDescribtion);
 
+			// creating product images
 			product.images.forEach((imageUrl) => {
 				const productImage = document.createElement('img');
 				productImage.className = 'product_image'
