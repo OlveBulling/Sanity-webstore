@@ -1,13 +1,14 @@
 .product_image {
-	
+	max-width: 20rem;
+	margin: 0.5rem;
 }
 
 .product_category {
-
+	
 }
 
 .product_title {
-
+ font-size: 3rem;
 }
 
 .product_describtion {
@@ -15,5 +16,9 @@
 }
 
 .product_price {
+	font-size: 2rem;
+}
 
+.product_card {
+	margin-bottom: 5rem;
 }
