@@ -6,6 +6,8 @@ export default async function Products() {
 			'images': image[].asset->url,
 			name,
 			'category': category->name,
+			price,
+			describtion,
 		 }`;
 
 	// const params = {};
@@ -23,14 +25,20 @@ export default async function Products() {
 			productCard.appendChild(productTitle);
 
 			const productCategory = document.createElement('p');
-			productCategory.textContent = products[index].category;
 			productCategory.className = 'product_category';
+			productCategory.textContent = products[index].category;
 			productCard.appendChild(productCategory);
+
+			const productPrice = document.createElement('p');
+			productPrice.classnName = 'product_price';
+			productPrice.textContent = (products[index].price) + 'kr';
+			productCard.appendChild(productPrice);
+
 
 			product.images.forEach((imageUrl) => {
 				const productImage = document.createElement('img');
-				productImage.src = imageUrl;
 				productImage.className = 'product_image'
+				productImage.src = imageUrl;
 				productCard.appendChild(productImage);
 			})
 			
