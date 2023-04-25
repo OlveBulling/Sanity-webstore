@@ -34,7 +34,7 @@ export default async function Products() {
 
 			// creating product price
 			const productPrice = document.createElement('p');
-			productPrice.classnName = 'product_price';
+			productPrice.className = 'product_price';
 			productPrice.textContent = (products[index].price) + 'kr';
 			productCard.appendChild(productPrice);
 
