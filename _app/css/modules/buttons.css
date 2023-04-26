@@ -1,0 +1,17 @@
+#button_container {
+	background-color: red;
+	position: absolute;
+	width: 100%;
+	height: 3rem;
+	top: 4rem;
+	padding: 0.5rem;
+}
+
+.category_button {
+	color: inherit;
+	border: 0.1rem solid black;
+	padding: 0.3rem;
+	font: inherit;
+	cursor: pointer;
+	background: none;
+}

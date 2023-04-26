@@ -12,15 +12,17 @@ export default async function buttonGenerator() {
 
 	const products = await sanity.fetch(query);
 
-	const buttonsContainer = document.getElementById('buttons_container');
+	const buttonContainer = document.getElementById('button_container');
 	
 	products.forEach((product, index) => {
 		const categories = products[index].category;
 
 		const button = document.createElement('button');
 
+		button.className = 'category_button';
+
 		button.innerText = categories;
 
-		buttonsContainer.appendChild(button);
+		buttonContainer.appendChild(button);
 	});
 }
