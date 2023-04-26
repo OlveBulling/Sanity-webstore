@@ -10,6 +10,10 @@
 	margin: 0.5rem 5rem 0 5rem;
 }
 
+.hidden {
+	display: none;
+}
+
 .product_title {
  font-size: 3rem;
 }
