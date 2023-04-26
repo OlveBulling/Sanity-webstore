@@ -13,8 +13,10 @@ export default async function Products() {
 	// const params = {};
 
 	const products = await sanity.fetch(query);
+	const productList = document.getElementById('product_container');
 
-	function createProductCards() {
+	function createProductCards(products, productList) {
+		productList.innerHTML = '';
 		// creating product card
 		products.forEach((product, index) => {
 			const productCard = document.createElement('div');
@@ -52,11 +54,10 @@ export default async function Products() {
 			productDescribtion.textContent = products[index].describtion;
 			productCard.appendChild(productDescribtion);
 			
-			const productList = document.getElementById('product_container');
 			productList.appendChild(productCard);
 		});
 	}
 
-	createProductCards();
+	createProductCards(products, productList);
 }
 
