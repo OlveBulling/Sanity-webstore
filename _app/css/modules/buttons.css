@@ -5,6 +5,7 @@
 	height: 3rem;
 	top: 4rem;
 	padding: 0.5rem;
+	
 }
 
 .category_button {
@@ -13,5 +14,6 @@
 	padding: 0.3rem;
 	font: inherit;
 	cursor: pointer;
-	background: none;
+	background-color: white;
+	margin: 0 0.3rem 0 0.3rem;
 }
