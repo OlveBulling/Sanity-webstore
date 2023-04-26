@@ -52,7 +52,6 @@ export default async function Products() {
 			productDescribtion.textContent = products[index].describtion;
 			productCard.appendChild(productDescribtion);
 			
-			
 			const productList = document.getElementById('product_container');
 			productList.appendChild(productCard);
 		});
